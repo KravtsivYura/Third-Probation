@@ -1,0 +1,85 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	padding: 32px;
+	background-color: #fff;
+	z-index: 99;
+	@media screen and (max-width:738px){
+		width: 100%;
+		max-height: 25vh;
+	}
+	.header-container {
+		height: 100%;
+		@include flex;
+		justify-content: space-between;
+		@media screen and (max-width:738px){
+			flex-direction: row;
+		}
+		.header-logo {
+			a {
+				img {
+					display: block;
+				}
+			}
+		}
+		.header-main-container {
+			@include flex;
+			flex-direction: row;
+			margin-bottom: 12px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+         	a {
+         		color: #333333;
+         		text-decoration: none;
+         		@include flex;
+         		flex-direction: row;
+         		svg {
+         			@media screen and (max-width:738px){
+         				font-size: 14px;
+         			}
+         		}
+         		p {
+         			font-size: 24px;
+         			margin-bottom: 0;
+         			margin-left: 10px;
+         			@media screen and (max-width:738px){
+         				font-size: 14px;
+         			}
+         		}
+         	}
+		}
+		.header-icons {
+			@include flex;
+			flex-direction: row;
+			@media screen and (max-width:738px){
+				flex-direction: column;
+			}
+			.header-icon-simple {
+				margin-left: 28px;
+				&:first-child {
+					margin-left: 0;
+					@media screen and (max-width:738px){
+						margin-left: 28px;
+					}
+				}
+			}
+		}
+		.header-footer {
+			@include flex;
+			flex-direction: row;
+			margin-top: -40px;
+			@media screen and (max-width:738px){
+				display: none;
+			}
+			img {
+				margin-right: 6px;
+			}
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+}

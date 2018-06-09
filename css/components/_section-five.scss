@@ -1,0 +1,23 @@
+#section-five {
+	.row {
+		width: 100%;
+		.section-text-photo {
+
+		}
+		.section-text-conteiner {
+			@include section-text-conteiner;
+			align-items: center;
+			justify-content: center;
+			p {
+				font-size: 24px;
+				margin-bottom: 50px;
+			}
+			a {
+				button {
+					@include button-with-arrow;
+					color: white;
+				}
+			}
+		}
+	}
+}

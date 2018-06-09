@@ -1,0 +1,76 @@
+@mixin flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+@mixin slider-button {
+	position: absolute;
+	top: 90%;
+	z-index: 99;
+	&:hover {
+		cursor: pointer;
+	}
+	.fas {
+		color: #4F4F4F;
+		font-size: 22px;
+	}
+}
+@mixin button-with-arrow {
+	@include flex;
+	flex-direction: row;
+	background: #7C3457;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	padding: 20px 24px;
+	font-size: 18px;
+	text-transform: uppercase;
+	&:hover {
+		opacity: .7;
+	}
+	span {
+		margin-right: 10px;
+	}
+}
+@mixin section-text-conteiner {
+	@include flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding-right: 28px;
+	padding-left: 60px;
+	padding-bottom: 40px;
+	background-color: #F2EEE5;
+	h2 {
+		margin-bottom: 40px;
+		font-weight: 600;
+		font-size: 36px;
+	}
+	p {
+		font-size: 28px;
+		margin-bottom: 180px;
+	}
+}
+
+@import "slick.scss";
+@import "./components/_header.scss";
+@import "./components/_section-one.scss";
+@import "./components/_section-two.scss";
+@import "./components/_section-three.scss";
+@import "./components/_section-four.scss";
+@import "./components/_section-five.scss";
+@import "./components/_section-six.scss";
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	margin: 0;
+}
+p {
+	color: #4F4F4F;
+}
